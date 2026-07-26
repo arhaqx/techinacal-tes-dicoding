@@ -1,6 +1,6 @@
 # Dicoding Jobs Submission
 
-Aplikasi web pencarian dan manajemen lowongan kerja (Dicoding Jobs) fullstack yang dibangun menggunakan Next.js (App Router) sebagai frontend dan Django REST Framework (DRF) sebagai backend RESTful API.
+Aplikasi web pencarian dan manajemen lowongan kerja (Dicoding Jobs) fullstack yang dibuat pake Next.js (App Router) sebagai frontend dan Django sebagai backend RESTful API.
 
 ---
 
@@ -80,7 +80,7 @@ Aplikasi ini memiliki fitur utama:
 ## 4. Cara Menjalankan Frontend (Next.js)
 
 ### Prerequisites
-- Node.js v18+ & npm installed
+- Node.js v18 keatas & npm terinstall
 
 ### Langkah-langkah:
 
@@ -137,6 +137,19 @@ Base URL: `http://127.0.0.1:8000/api/vacancies/`
 | **PUT** | `/api/vacancies/<id>/` | Memperbarui data lowongan kerja | Body JSON lengkap |
 | **PATCH** | `/api/vacancies/<id>/` | Memperbarui parsial data lowongan kerja | Body JSON parsial |
 | **DELETE** | `/api/vacancies/<id>/` | Menghapus data lowongan kerja | - |
+
+---
+
+## 7. Catatan Jaringan & Troubleshooting
+
+### Pengujian Lokal (Rekomendasi Utama)
+- **Gunakan Alamat Localhost**: Selalu gunakan `http://localhost:3000` pada browser untuk pengujian lokal. Alamat ini bersifat permanen dan tidak terpengaruh oleh perubahan IP router/WiFi.
+- **Koneksi Backend**: Pastikan backend Django (`python manage.py runserver`) sudah aktif pada port 8000 agar frontend dapat mengambil data API.
+
+### Akses Jaringan Lokal (LAN / Multi-Device)
+- Jika ingin menguji dari perangkat lain pada WiFi yang sama:
+  - Jalankan backend dengan: `python manage.py runserver 0.0.0.0:8000`
+  - Tambahkan IP lokal baru ke `allowedDevOrigins` di `frontend/next.config.ts` jika Next.js dev server menampilkan peringatan cross-origin.
 
 ---
 
