@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+/.pnp
+.pnp.*
+
+# Python / Django
+backend/venv/
+venv/
+ENV/
+env/
+*.pyc
+__pycache__/
+*.sqlite3
+*.log
+
+# Next.js / Frontend
+frontend/.next/
+frontend/out/
+frontend/build/
+.next/
+out/
+build/
+
+# Testing & Reports
+test-results/
+playwright-report/
+playwright/.cache/
+coverage/
+
+# Environment & OS files
+.env
+.env*.local
+.DS_Store
+Thumbs.db
